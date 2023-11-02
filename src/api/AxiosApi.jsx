@@ -12,5 +12,9 @@ const AxiosApi = {
     // axios는 자동으로 JSON 형식으로 변환해서 보내줌
     return await axios.post(KH_DOMAIN + "/users/login", login);
   },
+
+  memberGet: async (id) => {
+    return await axios.get(KH_DOMAIN + `/users/member/?id=${id}`);
+  },
 };
 export default AxiosApi;
